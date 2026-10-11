@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Gaji Karyawan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Program Hitung Gaji Karyawan</h1>
+    <!-- Form input -->
+    <form id="hitungPenghasilan">
+        <table>
+            <tr>
+                <th>Golongan Karyawan</th>
+                <th>Total Jam Lembur</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="karyawan" id="golongan">
+                        <option value="A">Golongan A</option>
+                        <option value="B">Golongan B</option>
+                        <option value="C">Golongan C</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" step="any" placeholder="Input total jam lembur" id="jamLembur">
+                </td>
+        </tr>
+        </table>
+        <button type="button" id="btnSubmit">Submit</button>
+    </form>
+    
+    <!-- Modal -->
+    <div id="modalGaji" class="modal">
+        <div class="modalContent">
+            <span class="closeBtn" id="closeModal">&times;</span>
+            <h2>Hasil Perhitungan Gaji</h2>
+            <hr>
+                <p><strong>Gaji Pokok :</strong><span id="hasilGaji"></span></p>
+                <p><strong>Overtime :</strong><span id="hasilLembur"></span></p>
+                <p><strong>Net Salary :</strong><span id="hasilTotal"></span></p>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
