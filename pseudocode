@@ -1,0 +1,48 @@
+PROGRAM HitungGajiKaryawan
+DEKLARASI:
+    golongan : String
+    jam_lembur : Integer
+    gaji_pokok, tarif_lembur, gaji_lembur, total_penghasilan : Real
+
+
+ALGORITMA:
+    // 1. Proses Input
+    INPUT golongan
+    INPUT jam_lembur
+
+
+    // 2. Cek Kondisi Golongan (Decision)
+    IF golongan == "A" THEN
+        gaji_pokok = 5000000
+    ELSE IF golongan == "B" THEN
+        gaji_pokok = 6500000
+    ELSE IF golongan == "C" THEN
+        gaji_pokok = 9500000
+    ELSE
+        gaji_pokok = 0
+    END IF
+
+
+    // 3. Cek Kondisi Jam Lembur (Decision)
+    IF jam_lembur == 0 THEN
+        tarif_lembur = 0
+    ELSE IF jam_lembur == 1 THEN
+        tarif_lembur = 0.30
+    ELSE IF jam_lembur == 2 THEN
+        tarif_lembur = 0.32
+    ELSE IF jam_lembur == 3 THEN
+        tarif_lembur = 0.34
+    ELSE IF jam_lembur == 4 THEN
+        tarif_lembur = 0.36
+    ELSE IF jam_lembur >= 5 THEN
+        tarif_lembur = 0.38
+    END IF
+
+
+    // 4. Proses Perhitungan
+    gaji_lembur = tarif_lembur * gaji_pokok
+    total_penghasilan = gaji_pokok + gaji_lembur
+
+
+    // 5. Proses Output
+    OUTPUT total_penghasilan
